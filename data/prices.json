@@ -1,6 +1,6 @@
 {
   "as_of": "2026-10-16",
-  "generated_at_utc": "2026-10-19T12:54:46.976047+00:00",
+  "generated_at_utc": "2026-10-19T13:02:40.824172+00:00",
   "stocks": {
     "JPM": {
       "daily": 1.2488,
@@ -95,6 +95,24 @@
       "weekly": -3.4729,
       "market_cap": 45686001664,
       "close": 173.16,
+      "date": "2026-10-16",
+      "previous_week_date": "2026-10-09"
+    }
+  },
+  "benchmarks": {
+    "SP500": {
+      "daily": -1.0927,
+      "weekly": -1.9471,
+      "market_cap": null,
+      "close": 7659.4399,
+      "date": "2026-10-16",
+      "previous_week_date": "2026-10-09"
+    },
+    "XLF": {
+      "daily": 0.4523,
+      "weekly": 1.4435,
+      "market_cap": null,
+      "close": 55.52,
       "date": "2026-10-16",
       "previous_week_date": "2026-10-09"
     }
