@@ -42,6 +42,24 @@ def gather(ticker):
             "previous_week_date":prev_week_date.isoformat()}
 
 
+def treasury_yield():
+    """Yahoo ^TNX quotes 10-year Treasury yield in percentage points times ten."""
+    t = yf.Ticker("^TNX")
+    hist = t.history(period="1mo", interval="1d", auto_adjust=False)
+    closes = hist["Close"].dropna()
+    if len(closes) < 2:
+        raise ValueError("not enough 10-year yield observations")
+    latest = closes.index[-1].date()
+    current = float(closes.iloc[-1]) / 10
+    prior = float(closes.iloc[-2]) / 10
+    monday = latest.toordinal() - latest.weekday()
+    older = [(dt.date(), float(v)/10) for dt,v in closes.items() if dt.date().toordinal()<monday]
+    if not older:
+        raise ValueError("previous week yield missing")
+    return {"yield":round(current,3),"daily_bp":round((current-prior)*100,2),
+            "weekly_bp":round((current-older[-1][1])*100,2),"date":latest.isoformat()}
+
+
 def main():
     previous = {}
     if OUTPUT.exists():
@@ -74,7 +92,16 @@ def main():
         except Exception as exc:
             print("FAILED", name, str(exc))
             benchmarks[name] = {"daily": None, "weekly": None}
-    data={"as_of":date,"generated_at_utc":datetime.now(timezone.utc).isoformat(),"stocks":result,"benchmarks":benchmarks}
+    treasury = {"yield":None,"daily_bp":None,"weekly_bp":None}
+    try:
+        treasury = treasury_yield()
+        # Treasury observations can be dated differently from US stocks on holidays.
+        if treasury["date"] != date:
+            print("Treasury observation date differs:", treasury["date"], date)
+        print("US10Y", treasury["date"], treasury["yield"])
+    except Exception as exc:
+        print("FAILED US10Y", str(exc))
+    data={"treasury10y":treasury,"as_of":date,"generated_at_utc":datetime.now(timezone.utc).isoformat(),"stocks":result,"benchmarks":benchmarks}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
     if not date:
