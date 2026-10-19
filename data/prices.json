@@ -1,6 +1,12 @@
 {
+  "treasury10y": {
+    "yield": 0.51,
+    "daily_bp": 0.04,
+    "weekly_bp": 0.04,
+    "date": "2026-10-19"
+  },
   "as_of": "2026-10-16",
-  "generated_at_utc": "2026-10-19T13:02:40.824172+00:00",
+  "generated_at_utc": "2026-10-19T13:22:03.900931+00:00",
   "stocks": {
     "JPM": {
       "daily": 1.2488,
