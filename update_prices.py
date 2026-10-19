@@ -64,6 +64,7 @@ def main():
         if r.get("date")!=date:
             result[symbol] = {"daily":None,"weekly":None,"market_cap":None}
     data={"as_of":date,"generated_at_utc":datetime.now(timezone.utc).isoformat(),"stocks":result}
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
     if not date:
         raise RuntimeError("All stock price downloads failed")
