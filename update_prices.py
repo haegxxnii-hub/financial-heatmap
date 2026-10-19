@@ -5,6 +5,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 import yfinance as yf
 
+BENCHMARKS = {"SP500": "^GSPC", "XLF": "XLF"}
 TICKERS = ["JPM", "C", "BAC", "WFC", "GS", "MS", "BLK", "V", "MA", "AXP", "HOOD", "COIN"]
 OUTPUT = Path(__file__).parent / "data" / "prices.json"
 
@@ -63,7 +64,17 @@ def main():
     for symbol,r in result.items():
         if r.get("date")!=date:
             result[symbol] = {"daily":None,"weekly":None,"market_cap":None}
-    data={"as_of":date,"generated_at_utc":datetime.now(timezone.utc).isoformat(),"stocks":result}
+    benchmarks = {}
+    for name, symbol in BENCHMARKS.items():
+        try:
+            benchmarks[name] = gather(symbol)
+            if benchmarks[name].get("date") != date:
+                raise ValueError("benchmark date differs from stock date")
+            print(name, benchmarks[name]["date"], benchmarks[name]["daily"])
+        except Exception as exc:
+            print("FAILED", name, str(exc))
+            benchmarks[name] = {"daily": None, "weekly": None}
+    data={"as_of":date,"generated_at_utc":datetime.now(timezone.utc).isoformat(),"stocks":result,"benchmarks":benchmarks}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
     if not date:
