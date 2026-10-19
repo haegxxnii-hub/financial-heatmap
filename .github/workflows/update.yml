@@ -1,8 +1,8 @@
 name: Update prices
 on:
   schedule:
-    # 08:30 KST Tuesday-Saturday, after US regular session closes.
-    - cron: '30 23 * * 1-5'
+    # 07:00 KST Tuesday-Saturday (22:00 UTC Monday-Friday).
+    - cron: '0 22 * * 1-5'
   workflow_dispatch:
 permissions:
   contents: write
