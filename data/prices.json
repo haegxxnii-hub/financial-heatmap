@@ -1,126 +1,126 @@
 {
   "treasury10y": {
     "yield": 0.486,
-    "daily_bp": 0.22,
-    "weekly_bp": -0.7,
-    "date": "2026-11-06"
+    "daily_bp": 0.05,
+    "weekly_bp": 0.05,
+    "date": "2026-11-09"
   },
-  "as_of": "2026-11-06",
-  "generated_at_utc": "2026-11-06T22:28:47.657104+00:00",
+  "as_of": "2026-11-09",
+  "generated_at_utc": "2026-11-09T22:35:40.850183+00:00",
   "stocks": {
     "JPM": {
-      "daily": -0.8448,
-      "weekly": -0.7566,
-      "market_cap": 888274812928,
-      "close": 334.49,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 2.2691,
+      "weekly": 2.2691,
+      "market_cap": 908430868480,
+      "close": 342.08,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "C": {
-      "daily": 0.5065,
-      "weekly": -2.9273,
-      "market_cap": 197051564032,
-      "close": 119.05,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 2.4527,
+      "weekly": 2.4527,
+      "market_cap": 201885286400,
+      "close": 121.97,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "BAC": {
-      "daily": -0.6833,
-      "weekly": -1.1798,
-      "market_cap": 341008318464,
-      "close": 49.42,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 2.2865,
+      "weekly": 2.2865,
+      "market_cap": 348805562368,
+      "close": 50.55,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "WFC": {
-      "daily": -1.0142,
-      "weekly": 0.6475,
-      "market_cap": 251975319552,
-      "close": 83.94,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 1.8466,
+      "weekly": 1.8466,
+      "market_cap": 256628178944,
+      "close": 85.49,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "GS": {
-      "daily": -0.3602,
-      "weekly": -3.2117,
-      "market_cap": 249732448256,
-      "close": 865.82,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 4.6661,
+      "weekly": 4.6661,
+      "market_cap": 261385191424,
+      "close": 906.22,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "MS": {
-      "daily": -0.5481,
-      "weekly": -1.5518,
-      "market_cap": 283953594368,
-      "close": 181.44,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 3.1195,
+      "weekly": 3.1195,
+      "market_cap": 292445519872,
+      "close": 187.1,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "BLK": {
-      "daily": 0.7004,
-      "weekly": 2.7302,
-      "market_cap": 182045147136,
-      "close": 1178.87,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 3.0402,
+      "weekly": 3.0402,
+      "market_cap": 187579678720,
+      "close": 1214.71,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "V": {
-      "daily": 0.0142,
-      "weekly": 2.1906,
-      "market_cap": 789935357952,
-      "close": 422.65,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": -0.1159,
+      "weekly": -0.1159,
+      "market_cap": 787666173952,
+      "close": 422.16,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "MA": {
-      "daily": -0.4909,
-      "weekly": 2.3025,
-      "market_cap": 568616681472,
-      "close": 652.7,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 0.4765,
+      "weekly": 0.4765,
+      "market_cap": 571326005248,
+      "close": 655.81,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "AXP": {
-      "daily": -1.2247,
-      "weekly": 0.5891,
-      "market_cap": 215240474624,
-      "close": 320.99,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 1.0343,
+      "weekly": 1.0343,
+      "market_cap": 217466716160,
+      "close": 324.31,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "HOOD": {
-      "daily": 3.2147,
-      "weekly": -4.8006,
-      "market_cap": 72858755072,
-      "close": 80.91,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 2.9786,
+      "weekly": 2.9786,
+      "market_cap": 75028930560,
+      "close": 83.32,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "COIN": {
-      "daily": -1.5056,
-      "weekly": -6.1168,
-      "market_cap": 35679518720,
-      "close": 134.76,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "daily": 0.9944,
+      "weekly": 0.9944,
+      "market_cap": 36034301952,
+      "close": 136.1,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     }
   },
   "benchmarks": {
     "SP500": {
-      "daily": 0.3145,
-      "weekly": -2.6808,
+      "daily": 2.3463,
+      "weekly": 2.3463,
       "market_cap": null,
-      "close": 7376.8599,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "close": 7549.9399,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     },
     "XLF": {
-      "daily": -0.5913,
-      "weekly": 1.1502,
+      "daily": 1.4521,
+      "weekly": 1.4521,
       "market_cap": null,
-      "close": 57.16,
-      "date": "2026-11-06",
-      "previous_week_date": "2026-10-30"
+      "close": 57.99,
+      "date": "2026-11-09",
+      "previous_week_date": "2026-11-06"
     }
   }
 }
